@@ -42,11 +42,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         // Left encoder
         switch (biton32(layer_state)) {
-			2:
+			case 2:
 				if (clockwise) { tap_code(RGB_MOD); }
                 else { tap_code(RGB_RMOD); }
                 break;
-			1:
+			case 1:
 				if (clockwise) { tap_code(KC_WH_R); }
                 else { tap_code(KC_WH_L); }
                 break;
@@ -59,11 +59,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     else if (index == 1) {
         // Right encoder
         switch (biton32(layer_state)) {
-			2:
+			case 2:
 				if (clockwise) { tap_code(RGB_HUI); }
                 else { tap_code(RGB_HUD); }
                 break;
-			1:
+			case 1:
 				if (clockwise) { tap_code(KC_TAB); }
                 else { SHIFTTAB; }
                 break;
@@ -90,9 +90,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 							   RGB_SPD, RGB_VAD, MO(2), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
 							   RGB_SAI, RGB_HUI, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
 							   RGB_SAD, RGB_HUD, _______, GUI_OFF, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______)	*/
-	[2] = LAYOUT_65_with_macro(RGB_MOD, RGB_TOG, _______, X(INVBANG), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
-							   RGB_SPI, RGB_VAI, _______, _______, X(SNEK), X(DEGREE), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
+	[2] = LAYOUT_65_with_macro(RGB_MOD, RGB_TOG, _______, INVBANG, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
+							   RGB_SPI, RGB_VAI, _______, _______, SNEK, DEGREE, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
 							   RGB_SPD, RGB_VAD, MO(2), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
-							   RGB_SAI, RGB_HUI, _______, _______, _______, _______, _______, _______, _______, _______, X(IRONY), X(INTERROBANG), X(PREGUNTA), _______, _______, _______, 
+							   RGB_SAI, RGB_HUI, _______, _______, _______, _______, _______, _______, _______, _______, IRONY, INTERROBANG, PREGUNTA, _______, _______, _______, 
 							   RGB_SAD, RGB_HUD, _______, GUI_OFF, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______)*/
 };
