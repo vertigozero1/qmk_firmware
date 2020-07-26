@@ -65,7 +65,10 @@ void encoder_update_user(uint8_t index, bool clockwise) {
                 break;*/
 			case 1:
 				if (clockwise) { tap_code(KC_TAB); }
-                else { tap_code(SHIFTTAB); }
+                else { 
+					register_code(SHIFTTAB);
+					unregister_code(SHIFTTAB); 
+				}
                 break;
             default:
 				if (clockwise) { tap_code(KC_VOLU); } 
