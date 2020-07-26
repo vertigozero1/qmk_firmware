@@ -71,7 +71,8 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 				if (clockwise) { tap_code(KC_VOLU); } 
 				else { tap_code(KC_VOLD); }
 				break;
-    }
+    	}
+	}
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -94,5 +95,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 							   RGB_SPI, RGB_VAI, _______, _______, SNEK, DEGREE, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
 							   RGB_SPD, RGB_VAD, MO(2), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
 							   RGB_SAI, RGB_HUI, _______, _______, _______, _______, _______, _______, _______, _______, IRONY, INTERROBANG, PREGUNTA, _______, _______, _______, 
-							   RGB_SAD, RGB_HUD, _______, GUI_OFF, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______)
-};
+							   RGB_SAD, RGB_HUD, _______, GUI_OFF, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______);
+}
