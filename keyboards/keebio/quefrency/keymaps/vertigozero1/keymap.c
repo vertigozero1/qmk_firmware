@@ -63,13 +63,13 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 				if (clockwise) { tap_code(RGB_HUI); }
                 else { tap_code(RGB_HUD); }
                 break;*/
-			case 1:
+			/*case 1:
 				if (clockwise) { tap_code(KC_TAB); }
                 else { 
 					register_code(SHIFTTAB);
 					unregister_code(SHIFTTAB); 
 				}
-                break;
+                break;*/
             default:
 				if (clockwise) { tap_code(KC_VOLU); } 
 				else { tap_code(KC_VOLD); }
