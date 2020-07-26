@@ -21,7 +21,8 @@ const uint32_t PROGMEM unicode_map[] = {
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   SHIFTTAB,
-  SHRUG
+  SHRUG,
+  SHRUGGY
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -31,7 +32,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             else { } // released
             break;
 		case SHRUG:
-            if (record->event.pressed) { SEND_STRING("\¯\\_(-.-)_/\¯"); } // pressed
+            if (record->event.pressed) { SEND_STRING("¯\\_(-.-)_/¯"); } // pressed
+            else { } // released
+            break;
+		case SHRUGGY:
+            if (record->event.pressed) { SEND_STRING("¯\\_(ツ)_/¯"); } // pressed
             else { } // released
             break;
     }
@@ -84,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 							   KC_F4,  KC_F5,   MO(2),   KC_A,    KC_S,    KC_D,  KC_F,   KC_G,  KC_H,   KC_J,     KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_ENT,  KC_PSCR, 
 							   KC_F7,  KC_F8,   KC_LSFT, KC_Z,    KC_X,    KC_C,  KC_V,   KC_B,  KC_N,   KC_M,     KC_COMM, KC_DOT,  KC_SLSH, KC_LSFT, KC_UP,   KC_INS, 
 							   KC_F11, KC_F12,  KC_LCTL, KC_LGUI, KC_LALT, MO(1), KC_SPC, KC_APP, KC_SPC, KC_RALT, MO(1),   KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT),
-	[1] = LAYOUT_65_with_macro(BL_STEP, BL_TOGG, KC_GRV,  KC_F1,  KC_F2,    KC_F3,   KC_F4,   KC_F5,   KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DEL, KC_DEL, _______, 
+	[1] = LAYOUT_65_with_macro(BL_STEP, BL_TOGG, KC_GRV,  KC_F1,  KC_F2,    KC_F3,   KC_F4,   KC_F5,   KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DEL, KC_DEL, SHRUGGY	, 
 							   BL_ON,   BL_INC,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
 							   BL_OFF,  BL_DEC,  KC_CAPS, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, 
 							   KC_BRIU, KC_BRID, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_PGUP, _______, 
