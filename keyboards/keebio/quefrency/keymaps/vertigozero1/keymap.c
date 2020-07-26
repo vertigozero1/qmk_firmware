@@ -1,16 +1,5 @@
 #include QMK_KEYBOARD_H
 
-enum unicode_names {
-    DEGREE,
-    INTERROBANG,
-    IRONY,
-    INVBANG,
-    PREGUNTA,
-    SNEK
-};
-
-
-
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   SHRUG
