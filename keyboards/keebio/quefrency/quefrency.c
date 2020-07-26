@@ -10,13 +10,11 @@ enum unicode_names {
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-    [COPYRIGHT] = 0x00A9,// ©
     [DEGREE] = 0x00B0,   // °
     [INTERROBANG]  = 0x203D,  // ‽
     [IRONY] = 0x2E2E,    // ⸮
     [INVBANG] = 0x00A1,  // ¡
     [PREGUNTA] = 0x00BF, // ¿
-    [REGIST] = 0x00AE,   // ®
     [SNEK]  = 0x1F40D,   // 🐍
 };
 
