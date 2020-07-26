@@ -1,6 +1,6 @@
 #include "quefrency.h"
 
-enum unicode_names {
+/*enum unicode_names {
     DEGREE,
     INTERROBANG,
     IRONY,
@@ -16,4 +16,4 @@ const uint32_t PROGMEM unicode_map[] = {
     [INVBANG] = 0x00A1,  // ¡
     [PREGUNTA] = 0x00BF, // ¿
     [SNEK]  = 0x1F40D,   // 🐍
-};
+};*/
