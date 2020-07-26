@@ -15,7 +15,6 @@ const uint32_t PROGMEM unicode_map[] = {
     [IRONY] = 0x2E2E,    // ⸮
     [INVBANG] = 0x00A1,  // ¡
     [PREGUNTA] = 0x00BF, // ¿
-    [SNEK]  = 0x1F40D,   // 🐍
 };
 
 enum custom_keycodes {
@@ -27,10 +26,6 @@ enum custom_keycodes {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case SHIFTTAB:
-            if (record->event.pressed) { SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_TAB)SS_UP(X_LSHIFT)); } // pressed
-            else { } // released
-            break;
 		case SHRUG:
             if (record->event.pressed) { SEND_STRING("¯\\_(-.-)_/¯"); } // pressed
             else { } // released
