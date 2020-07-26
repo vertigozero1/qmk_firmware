@@ -20,17 +20,11 @@ const uint32_t PROGMEM unicode_map[] = {
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
-  SHIFTTAB,
   SHRUG
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case SHIFTTAB:
-            if (record->event.pressed) { SEND_STRING(SS_LSFT(SS_TAP(KC_TAB))); } // pressed
-            else { } // released
-            break;
-
         case SHRUG:
             if (record->event.pressed) { SEND_STRING("¯\\_(ツ)_/¯"); } // pressed
             else { } // released
@@ -43,11 +37,6 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         // Left encoder
         switch (biton32(layer_state)) {
-            case 1:
-                if (clockwise) { tap_code(KC_TAB); }
-                else { tap_code(SHIFTTAB); }
-                break;
-        
             default:
                 if (clockwise) { tap_code(KC_MS_WH_DOWN); }
                 else { tap_code(KC_MS_WH_UP); }
