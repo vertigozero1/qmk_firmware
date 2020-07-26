@@ -31,7 +31,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             else { } // released
             break;
 		case SHRUG:
-            if (record->event.pressed) { SEND_STRING("¯\\_(-.-)_/¯"); } // pressed
+            if (record->event.pressed) { SEND_STRING("\¯\\_(-.-)_/\¯"); } // pressed
             else { } // released
             break;
     }
@@ -47,12 +47,12 @@ void encoder_update_user(uint8_t index, bool clockwise) {
                 else { tap_code(RGB_RMOD); }
                 break;*/
 			case 1:
-				if (clockwise) { tap_code(KC_WH_R); }
-                else { tap_code(KC_WH_L); }
+				if (clockwise) { tap_code(KC_MS_WH_RIGHT); }
+                else { tap_code(KC_MS_WH_LEFT); }
                 break;
             default:
-                if (clockwise) { tap_code(KC_WH_D); }
-                else { tap_code(KC_WH_U); }
+                if (clockwise) { tap_code(KC_MS_WH_DOWN); }
+                else { tap_code(KC_MS_WH_UP); }
                 break;
             }
     }
